@@ -1,4 +1,4 @@
-@vlah.io/ngx-worker
+@vlah.io/ngx-pipe
 
 Angular pipes library.
 
