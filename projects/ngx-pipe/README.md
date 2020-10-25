@@ -1,24 +1,43 @@
-# NgxPipe
+@vlah.io/ngx-worker
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
+Angular pipes library.
 
-## Code scaffolding
+### Usage (code example)
 
-Run `ng generate component component-name --project ngx-pipe` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-pipe`.
-> Note: Don't forget to add `--project ngx-pipe` or else it will be added to the default project in your `angular.json` file. 
+#### Currency Pipes
+```
+  <span [innerText]="125.64 | vlahioEUR"></span>
 
-## Build
+  <span [innerText]="125.64 | vlahioUSD"></span>
 
-Run `ng build ngx-pipe` to build the project. The build artifacts will be stored in the `dist/` directory.
+  <span [innerText]="125.64 | vlahioGBP"></span>
+```
 
-## Publishing
+#### Date Pipe
+```
+  <span [innerText]="date | vlahioDate"></span>
 
-After building your library with `ng build ngx-pipe`, go to the dist folder `cd dist/ngx-pipe` and run `npm publish`.
+  <span [innerText]="date | vlahioDate:'dd/MM/yyyy hh:mma':'UTC'"></span>
+  <span [innerText]="date | vlahioDate:'dd/MM/yyyy hh:mma':'+0100'"></span>
 
-## Running unit tests
+  export class AppComponent {
+    date = new Date();
+  }
+```
 
-Run `ng test ngx-pipe` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#### Various Pipes
+```
+  <span [innerText]="1140.56 | vlahioNumeric"></span>
 
-## Further help
+  <span [innerText]="'someRandomText' | vlahioSplitUcWords"></span>
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+  <span [innerHTML]="text | vlahioHighlight:'text'"></span>
+```
+
+```
+  export class AppComponent {
+    text = 'This <span class="text">text</span> is long enough to help us make an idea of how this text will get highlighted each time the word text occurs.';
+  }
+```
+
+For more details read [here](https://github.com/vlah-io/ngx-pipe/blob/master/INSTALLATION.md).

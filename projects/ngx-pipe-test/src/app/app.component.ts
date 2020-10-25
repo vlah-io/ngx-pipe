@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ngx-pipe-test';
+  date = new Date();
+  text = 'This <span class="text">text</span> is long enough to help us make an idea of how this text will get highlighted each time the word text occurs.';
 }

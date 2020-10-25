@@ -1,7 +1,10 @@
-/*
- * Public API Surface of ngx-pipe
- */
-
-export * from './lib/ngx-pipe.service';
-export * from './lib/ngx-pipe.component';
-export * from './lib/ngx-pipe.module';
+export * from './lib/interface/ngx-pipe.interface';
+export * from './lib/pipe/currency/eur-currency.pipe';
+export * from './lib/pipe/currency/gbp-currency.pipe';
+export * from './lib/pipe/currency/usd-currency.pipe';
+export * from './lib/pipe/date/vlahio-date.pipe';
+export * from './lib/pipe/ngx-pipe.module';
+export * from './lib/pipe/various/numeric.pipe';
+export * from './lib/pipe/various/split-uc-words.pipe';
+export * from './lib/pipe/various/text-highlight.pipe';
+export * from './lib/service/injection-token';
