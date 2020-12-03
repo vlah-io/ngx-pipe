@@ -6,7 +6,7 @@ Package generated with `angular-cli` as follows
 ### Create new
 
 ```
-  ng new ngx-pipe --createApplication=false --prefix=vlah
+  ng new ngx-pipe --createApplication=false --prefix=vlahio
   cd ngx-pipe
 ```
 
@@ -14,7 +14,7 @@ Package generated with `angular-cli` as follows
 
 ```
   cd ngx-pipe
-  ng generate library ngx-pipe --prefix=vlah
+  ng generate library ngx-pipe --prefix=vlahio
 ```
 
 ### Generate test application

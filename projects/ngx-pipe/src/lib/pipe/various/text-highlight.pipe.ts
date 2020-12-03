@@ -11,9 +11,9 @@ export class TextHighlightPipe implements PipeTransform {
   transform(text: string, str: string): SafeHtml {
     const re = new RegExp(`(?<!</?[^>]*|&[^;]*)(${str})`, 'gi');
     return this.sanitized.bypassSecurityTrustHtml(
-      text.replace(re, (occurrence: string) => {
-        return `<span style="background-color: #ffc107; padding: 0 3px;">${occurrence}</span>`;
-      })
+      text.replace(re,
+        (occurrence: string) => `<span style="background-color: #ffc107; padding: 0 3px;">${occurrence}</span>`
+      )
     );
   }
 }

@@ -8,9 +8,7 @@ export class SplitUcWordsPipe implements PipeTransform {
     return value.split(/(?=[A-Z])/)
       .join(' ').toLowerCase()
       .replace(/\b[a-z]/g,
-        (letter) => {
-          return letter.toUpperCase();
-        }
+        (letter) => letter.toUpperCase()
       );
   }
 }
